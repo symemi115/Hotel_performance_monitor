@@ -41,4 +41,9 @@ The purpose of this engagment is to use data analysis to support two leadinh hot
  5. Create dashboard.
  6. Export Dashboard for documentation.
 
+### ***Tools Used***
+-Data Source: Kaggle Hotel Booking Demand Dataset (119,390 records)
+-Analysis Platform: Power BI Desktop
+
+### Key Findings:
 
