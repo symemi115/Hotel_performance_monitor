@@ -46,4 +46,49 @@ The purpose of this engagment is to use data analysis to support two leadinh hot
 -Analysis Platform: Power BI Desktop
 
 ### Key Findings:
+### Hypothesis 1: Lead Time vs Cancellation Risk: Confirmed 
+- **90+ day bookings:** 44% cancellation rate
+- **0-7 day bookings:** 18% cancellation rate  
+- **Risk multiplier:** 2.4x higher for early bookings
+- **Business implication:** Early bookings cancel significantly more, requiring policy intervention
+
+### Hypothesis 2: Family Segment Value: confirmed 
+- **Families spend:** $420 average per stay
+- **Couples spend:** $310 average per stay
+- **Revenue premium:** $110 (35% higher)
+- **Market opportunity:** Families represent only 15% of current bookings
+
+### Hypothesis 3: Resort Seasonality: Cofirmed 
+- **Resort Hotel:** 72% of revenue in summer (June-August)
+- **City Hotel:** 48% of revenue in same period
+- **Seasonal gap:** 24 percentage point difference
+- **Operational impact:** Extreme peak-trough cycles for Resort hotels
+
+## Analysis Methodology
+
+### Data Processing
+1. **Sampling:** 5,000 random bookings (4.2% of 119,390 total)
+2. **Feature Engineering:** Created calculated columns:
+   - `lead_time_category` (0-7, 8-30, 31-90, 90+ days)
+   - `guest_type` (Family, Couple, Solo, Group)
+   - `estimated_revenue` (ADR × total nights)
+3. **Tools Used:** Python (pandas, numpy), Jupyter Notebook
+
+### Statistical Validation
+- Used descriptive statistics for hypothesis testing
+- Calculated confidence intervals for key metrics
+- Verified sample representativeness against full dataset
+
+## Visualizations Created
+1. **Cancellation Analysis:**
+   - Bar chart: Cancellation rate by lead time category
+   - Trend line: Increasing risk with longer lead times
+2. **Revenue Segmentation:**
+   - Bar chart: Average revenue by guest type
+   - Pie chart: Booking share distribution
+3. **Seasonal Patterns:**
+   - Line chart: Monthly bookings comparison (City vs Resort)
+   - Bar chart: Summer concentration percentage
+
+*(See `analysis_results.png` for visualization outputs)*
 
