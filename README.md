@@ -41,6 +41,14 @@ The purpose of this engagment is to use data analysis to support two leadinh hot
  5. Create dashboard.
  6. Export Dashboard for documentation.
 
+### ***Data Source***
+***Dataset:*** Hotel Booking Demand Dataset from Kaggle.
+***Scope:*** 119,390 booking records for a Resort Hotel and a City Hotel.
+
+***Period:*** July 2015 to August 2017.
+
+***Contents:*** Guest demographics, reservation details, booking status, and pricing.
+
 ### ***Tools Used***
 -Data Source: Kaggle Hotel Booking Demand Dataset (119,390 records)
 -Analysis Platform: Power BI Desktop
