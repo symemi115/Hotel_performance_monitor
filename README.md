@@ -100,3 +100,134 @@ The purpose of this engagment is to use data analysis to support two leadinh hot
 
 *(See `analysis_results.png` for visualization outputs)*
 
+## ***Dashboard Architecture***
+**Page 1:** Strategy Dashboard (Executive View)
+
+- KPI Cards: Total Bookings (5969k), Total Revenue (€XXM), Cancellation Rate (XX%)
+- Trend Visualization: Monthly booking volume comparison - City vs Resort Hotel
+- Hypothesis Validation Cards: Three visual confirmations with direct business actions
+- Purpose: 30-second leadership overview.
+
+**Page 2:** Cancellation Risk Deep Dive
+- Primary Visual: Cancellation rate by lead time category (44% at 90+ days vs 18% at 0-7 days)
+- Secondary Visual: Cancellation rate by market segment (Groups: 64%, Online TA: 37%)
+- Geographic Context: Top 10 booking countries (Portugal: 41%)
+- Insight Layer: Critical findings with quantified recommendations
+- Purpose: Identify specific intervention points
+
+**Page 3:** Revenue Strategy & Segmentation
+- Value Proof: Average revenue by guest type (Families: €420, Couples: €310 - 35% premium)
+- Market Opportunity: Current booking mix (Families: 15% of bookings)
+- Seasonality Analysis: Summer revenue concentration (Resort: 72%, City: 48%)
+- Strategic Recommendations: Quantified targets with projected impact (+€5.0M opportunity)
+- Purpose: Growth strategy formulation
+
+### // Core Business Metrics
+Total Bookings = COUNTROWS('bookings')
+Cancellation Rate = 
+DIVIDE(
+    CALCULATE(COUNTROWS('bookings'), 'bookings'[is_canceled] = 1),
+    COUNTROWS('bookings')
+)
+
+Total Revenue = SUMX('bookings', 'bookings'[estimated_revenue])
+
+Average Revenue per Booking = AVERAGEX('bookings', 'bookings'[estimated_revenue])
+
+// Hypothesis 1 - Lead Time Risk
+Cancellation Risk Multiplier = 
+VAR EarlyRate = CALCULATE([Cancellation Rate], 'bookings'[lead_time_category] = "90+ days")
+VAR LateRate = CALCULATE([Cancellation Rate], 'bookings'[lead_time_category] = "0-7 days")
+RETURN
+DIVIDE(EarlyRate, LateRate, 0)
+
+// Hypothesis 2 - Family Premium
+Family Revenue Premium = 
+VAR FamilyRev = CALCULATE([Average Revenue per Booking], 'bookings'[guest_type] = "Family")
+VAR CoupleRev = CALCULATE([Average Revenue per Booking], 'bookings'[guest_type] = "Couple")
+RETURN
+FamilyRev - CoupleRev
+
+Family Premium % = 
+DIVIDE(
+    [Family Revenue Premium],
+    CALCULATE([Average Revenue per Booking], 'bookings'[guest_type] = "Couple"),
+    0
+)
+
+// Hypothesis 3 - Seasonal Concentration
+Summer Revenue % = 
+VAR SummerMonths = {6,7,8}
+VAR SummerRevenue = 
+CALCULATE(
+    [Total Revenue],
+    MONTH('bookings'[arrival_date]) IN SummerMonths
+)
+RETURN
+DIVIDE(SummerRevenue, [Total Revenue], 0)
+
+// Opportunity Projections
+Projected Family Revenue = 
+VAR CurrentFamilyBookings = 
+    CALCULATE(
+        COUNTROWS('bookings'),
+        'bookings'[guest_type] = "Family"
+    ) * 1.0
+VAR TargetFamilyShare = 0.25  // 25% target
+VAR TotalBookings = [Total Bookings]
+VAR TargetFamilyBookings = TotalBookings * TargetFamilyShare
+VAR NewFamilyBookings = TargetFamilyBookings - CurrentFamilyBookings
+RETURN
+NewFamilyBookings * [Average Revenue per Booking]
+
+###  Power BI Implementation Decisions
+***Data Modeling:***
+- Created separate measures table for cleaner organization
+- Established calendar table for time intelligence (not fully utilized in v1.0)
+- Set default summarization to "None" for all ID/lookup fields
+- Performance Optimization:
+- Sampled 5,000 rows (4.2%) during development for faster iteration
+- Verified sample representativeness against full dataset
+- Removed unused columns from report view
+
+***UI/UX Choices:***
+- Three-page structure matches three business hypotheses
+- Action-oriented insight cards instead of raw metrics
+- Consistent typography (Segoe UI, 12pt body, 20pt headers)
+- Removed pie charts entirely (hard to read, replaced with bar/column charts)
+- Strategic color coding guides attention to what matters
+
+***Validation & Limitations***
+- Sample Validation:
+- 5,000 row sample (4.2% of 119,390 total)
+- Verified distribution across hotels, guest types, and seasons
+- Confidence intervals calculated for key metrics
+- Limitations:
+- 2015-2017 data; post-pandemic booking behavior may differ
+- Revenue calculated from ADR × nights; actual transaction data not available
+- Staffing optimization based on occupancy patterns; internal cost data not available
+***Next Analysis Recommendations:***
+- Integrate competitor pricing data for family segment price sensitivity analysis
+- A/B test deposit policies on 90+ day bookings
+- Build predictive model for cancellation risk at booking moment
+
+### Tools & Technical Stack
+- Data Processing: Python 3.8 (pandas, numpy) in Jupyter Notebook
+- Data Visualization: Power BI Desktop
+- Version Control: Manual backup system (v1, v2, FINAL) - Git planned for v2.0
+- Documentation: Markdown / README.
+
+### Dashboard Screenshots
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+![alt text](image-3.png)
+
+### **Reflection & Learning**
+This project transformed raw hotel booking data into actionable business intelligence through:
+- Hypothesis-driven analysis: Starting with clear business questions, not just "what's interesting?"
+- Iterative design: Three major dashboard revisions based on clarity, not complexity
+- Action-first mindset: Every insight paired with "what do we do about it?"
+- User empathy: Designing for an executive with 30 seconds, not an analyst with 30 minutes
+- Biggest lesson: A great insight hidden in a cluttered dashboard is the same as no insight at all. Visualization is not decoration - it's communication.
