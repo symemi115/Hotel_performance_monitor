@@ -218,9 +218,19 @@ NewFamilyBookings * [Average Revenue per Booking]
 - DeepSeek AI Assistant Real-time consultation on dashboard layout, DAX optimisation, color strategy, and README documentation. 
 
 ### Dashboard Screenshots
-![alt text](image.png)
+### Page 1: Strategy Dashboard (Executive View)
+![Strategy Page - 30-second leadership overview](Power_BI_dashboard_pictures/01_strategy_page.png)
+*KPI cards, monthly booking trends, and hypothesis validation cards*
 
-![alt text](image-1.png)
+### Page 2: Cancellation Risk Deep Dive
+![Cancellations Page - Lead time and market segment analysis](Power_BI_dashboard_pictures/02_cancellations_page.png)
+*44% cancellation rate at 90+ days, Groups segment at 64% cancellation*
+
+### Page 3: Revenue Strategy & Segmentation
+![Revenue Page - Guest value and seasonality](Power_BI_dashboard_pictures/03_revenue_segments_page.png)
+*Family €420 vs Couple €310 (35% premium), Summer revenue concentration (72% vs 48%)* 
+
+
 
 ![alt text](image-3.png)
 
