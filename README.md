@@ -229,4 +229,52 @@ This project transformed raw hotel booking data into actionable business intelli
 - Iterative design: Three major dashboard revisions based on clarity, not complexity
 - Action-first mindset: Every insight paired with "what do we do about it?"
 - User empathy: Designing for an executive with 30 seconds, not an analyst with 30 minutes
-- Biggest lesson: A great insight hidden in a cluttered dashboard is the same as no insight at all. Visualization is not decoration - it's communication.
+- Biggest lesson: A great insight hidden in a cluttered dashboard is the same as no insight at all. Visualization is not decoration, it's communication.
+- Biggest lesson: A great insight hidden in a cluttered dashboard is the same as no insight at all. Visualization is not decoration, it's communication!
+
+
+## Skills Developed
+
+**Technical:**
+- **Power BI:** Dashboard design, DAX measures, data modeling, visual formatting, mobile layout
+- **Data Cleaning:** Python (pandas), handling nulls, feature engineering, sampling validation
+- **Data Analysis:** Hypothesis testing, descriptive statistics, pattern identification
+- **Git:** Version control basics, README documentation, project publishing
+
+**Business:**
+- **Requirements Translation:** From business questions → technical analysis → actionable insights
+- **Executive Communication:** Designing for 30-second decision-making, not data exploration
+- **Storytelling:** Structuring insights around narrative (problem → evidence → recommendation)
+- **ROI Quantification:** Translating data findings into revenue impact (£5.0M opportunity identified)
+
+**Soft:**
+- **Iterative Design:** Three major dashboard revisions based on feedback
+- **Self-Management:** Project planning, deadline adherence, independent problem-solving
+- **Resilience:** Transformed frustration and clutter into clarity and confidence
+- **Attention to Detail:** Consistent formatting, color strategy, typography
+**Portfolio Ready:** This project is now interview-ready and demonstrates end-to-end analytics capability.
+
+## **Acknowledgments**
+**Dataset:**
+- Source: [Hotel Booking Demand Dataset](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand) on Kaggle
+- Creator: Nuno Antonio, Ana Almeida, Luis Nunes
+- Citation: Antonio, N., de Almeida, A., & Nunes, L. (2019). "Hotel booking demand datasets." Data in Brief, 22, 41-49.
+- License: CC0: Public Domain 
+
+**Inspiration & Learning:**
+- Power BI community forums (DAX patterns)
+- SQLBI.com (measure technique references)
+- Storytelling with Data (Cole Nussbaumer Knaflic) - dashboard layout principles
+
+**Tools:**
+- Analysis completed using Power BI Desktop (free version)
+- Data cleaning: Python (pandas, numpy) in Jupyter Notebook
+- Documentation: Markdown / GitHub
+
+*This project was developed as a portfolio piece to demonstrate data analysis, visualization, and business storytelling capabilities.*
+
+I extend my sincere gratitude to Code Institute for providing comprehensive data analytics education that formed the foundation of this project. The skills and methodologies learned throughout the course were instrumental in developing this data visualization analysis.
+
+Special thanks to my tutors, Vasilica Pavaloi  and Mark Briscoe, for their patient guidance and invaluable support in addressing numerous technical questions and challenges encountered during development.
+
+I also wish to acknowledge my peers for their collaborative spirit, motivation, and shared insights that significantly contributed to the successful completion of this work.
