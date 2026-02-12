@@ -215,6 +215,7 @@ NewFamilyBookings * [Average Revenue per Booking]
 - Data Visualization: Power BI Desktop
 - Version Control: Manual backup system (v1, v2, FINAL) - Git planned for v2.0
 - Documentation: Markdown / README.
+- DeepSeek AI Assistant Real-time consultation on dashboard layout, DAX optimisation, color strategy, and README documentation. 
 
 ### Dashboard Screenshots
 ![alt text](image.png)
@@ -271,7 +272,12 @@ This project transformed raw hotel booking data into actionable business intelli
 - Data cleaning: Python (pandas, numpy) in Jupyter Notebook
 - Documentation: Markdown / GitHub
 
+**Technical Guidance & Support:**
+- Special thanks to **an AI assistant from DeepSeek** for real-time dashboard design consultation and DAX troubleshooting.
+- This included: color strategy recommendations, layout restructuring, README documentation refinement, and technical deployment support.
+
 *This project was developed as a portfolio piece to demonstrate data analysis, visualization, and business storytelling capabilities.*
+
 
 I extend my sincere gratitude to Code Institute for providing comprehensive data analytics education that formed the foundation of this project. The skills and methodologies learned throughout the course were instrumental in developing this data visualization analysis.
 
