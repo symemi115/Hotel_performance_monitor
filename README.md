@@ -135,63 +135,6 @@ The purpose of this engagment is to use data analysis to support two leadinh hot
 - Strategic Recommendations: Quantified targets with projected impact (+€5.0M opportunity)
 - Purpose: Growth strategy formulation
 
-### // Core Business Metrics
-Total Bookings = COUNTROWS('bookings')
-Cancellation Rate = 
-DIVIDE(
-    CALCULATE(COUNTROWS('bookings'), 'bookings'[is_canceled] = 1),
-    COUNTROWS('bookings')
-)
-
-Total Revenue = SUMX('bookings', 'bookings'[estimated_revenue])
-
-Average Revenue per Booking = AVERAGEX('bookings', 'bookings'[estimated_revenue])
-
-// Hypothesis 1 - Lead Time Risk
-Cancellation Risk Multiplier = 
-VAR EarlyRate = CALCULATE([Cancellation Rate], 'bookings'[lead_time_category] = "90+ days")
-VAR LateRate = CALCULATE([Cancellation Rate], 'bookings'[lead_time_category] = "0-7 days")
-RETURN
-DIVIDE(EarlyRate, LateRate, 0)
-
-// Hypothesis 2 - Family Premium
-Family Revenue Premium = 
-VAR FamilyRev = CALCULATE([Average Revenue per Booking], 'bookings'[guest_type] = "Family")
-VAR CoupleRev = CALCULATE([Average Revenue per Booking], 'bookings'[guest_type] = "Couple")
-RETURN
-FamilyRev - CoupleRev
-
-Family Premium % = 
-DIVIDE(
-    [Family Revenue Premium],
-    CALCULATE([Average Revenue per Booking], 'bookings'[guest_type] = "Couple"),
-    0
-)
-
-// Hypothesis 3 - Seasonal Concentration
-Summer Revenue % = 
-VAR SummerMonths = {6,7,8}
-VAR SummerRevenue = 
-CALCULATE(
-    [Total Revenue],
-    MONTH('bookings'[arrival_date]) IN SummerMonths
-)
-RETURN
-DIVIDE(SummerRevenue, [Total Revenue], 0)
-
-// Opportunity Projections
-Projected Family Revenue = 
-VAR CurrentFamilyBookings = 
-    CALCULATE(
-        COUNTROWS('bookings'),
-        'bookings'[guest_type] = "Family"
-    ) * 1.0
-VAR TargetFamilyShare = 0.25  // 25% target
-VAR TotalBookings = [Total Bookings]
-VAR TargetFamilyBookings = TotalBookings * TargetFamilyShare
-VAR NewFamilyBookings = TargetFamilyBookings - CurrentFamilyBookings
-RETURN
-NewFamilyBookings * [Average Revenue per Booking]
 
 ###  Power BI Implementation Decisions
 ***Data Modeling:***
@@ -233,16 +176,16 @@ NewFamilyBookings * [Average Revenue per Booking]
 
 ### Dashboard Screenshots
 ### Page 1: Strategy Dashboard (Executive View)
-![Strategy Page - 30-second leadership overview]![alt text](Assests/Images/01_strategy_page.png)
+![alt text](Assests/Images/01_strategy_page.png)
 *KPI cards, monthly booking trends, and hypothesis validation cards*
 
 ### Page 2: Cancellation Risk Deep Dive
-![Cancellation Risk Deep Dive - ]![alt text](Assests/Images/02_cancellations_page.png)
+![alt text](Assests/Images/02_cancellations_page.png)
 *Primary visual displays cancellation rate by lead time category, secondary visuals show cancellation rate by market segment and top booking countries, providing actionable intervention points*
 *44% cancellation rate at 90+ days, Groups segment at 64% cancellation*
 
 ### Page 3: Revenue Strategy & Segmentation
-![Revenue Page - Guest value and seasonality] ![alt text](Assests/Images/03_revenue_segments_page.png)
+ ![alt text](Assests/Images/03_revenue_segments_page.png)
 *Family €420 vs Couple €310 (35% premium), Summer revenue concentration (72% vs 48%)* 
 
 
