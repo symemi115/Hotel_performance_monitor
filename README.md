@@ -219,16 +219,16 @@ NewFamilyBookings * [Average Revenue per Booking]
 
 ### Dashboard Screenshots
 ### Page 1: Strategy Dashboard (Executive View)
-![Strategy Page - 30-second leadership overview](Assests/images/Power_BI_dashboard_pictures/01_strategy_page.png)
+![Strategy Page - 30-second leadership overview]![alt text](Assests/Images/01_strategy_page.png)
 *KPI cards, monthly booking trends, and hypothesis validation cards*
 
 ### Page 2: Cancellation Risk Deep Dive
-![Cancellation Risk Deep Dive - ](Assests/images/Power_BI_dashboard_pictures/02_cancellations_page.png)
+![Cancellation Risk Deep Dive - ]![alt text](Assests/Images/02_cancellations_page.png)
 *Primary visual displays cancellation rate by lead time category, secondary visuals show cancellation rate by market segment and top booking countries, providing actionable intervention points*
 *44% cancellation rate at 90+ days, Groups segment at 64% cancellation*
 
 ### Page 3: Revenue Strategy & Segmentation
-![Revenue Page - Guest value and seasonality](Assests/images/Power_BI_dashboard_pictures/03_revenue_segments_page.png)
+![Revenue Page - Guest value and seasonality] ![alt text](Assests/Images/03_revenue_segments_page.png)
 *Family €420 vs Couple €310 (35% premium), Summer revenue concentration (72% vs 48%)* 
 
 
@@ -293,3 +293,6 @@ I extend my sincere gratitude to Code Institute for providing comprehensive data
 Special thanks to my tutors, Vasilica Pavaloi  and Mark Briscoe, for their patient guidance and invaluable support in addressing numerous technical questions and challenges encountered during development.
 
 I also wish to acknowledge my peers for their collaborative spirit, motivation, and shared insights that significantly contributed to the successful completion of this work.
+
+
+[def]: Assests/images/Power_BI_dashboard_pictures/01_strategy_page.png
