@@ -2,6 +2,20 @@
 
 # **Hotel bookings and performance Monitor**
 
+
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=power%20bi&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+
+[![GitHub stars](https://img.shields.io/github/stars/symemi115/Hotel_performance_monitor?style=social)](https://github.com/symemi115/Hotel_performance_monitor/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/symemi115/Hotel_performance_monitor?style=social)](https://github.com/symemi115/Hotel_performance_monitor/network)
+[![GitHub last commit](https://img.shields.io/github/last-commit/symemi115/Hotel_performance_monitor)](https://github.com/symemi115/Hotel_performance_monitor/commits/main)
+
+## 📊 Project Overview
+
+A comprehensive data analysis and interactive dashboard project examining **119,390 hotel booking records** from two Portuguese hotels (Resort and City) over a 26-month period (July 2015 - August 2017). This project validates three key business hypotheses and provides actionable recommendations to improve revenue and operational efficiency.
+
 ## **Data Description** :
 This project analyses hotel booking data containting guests demographics, reservation details and cancellation details from two portugues hotels during July 2015 to August 2017. The dataset has been cleaned, transformed with new calculated columns that have been created to specifically analyse booking lead times, guest type groups and seasonal patterns. This analysis focuses on three key business hypotheses:
 
