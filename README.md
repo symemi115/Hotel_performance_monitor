@@ -12,6 +12,10 @@
 [![GitHub forks](https://img.shields.io/github/forks/symemi115/Hotel_performance_monitor?style=social)](https://github.com/symemi115/Hotel_performance_monitor/network)
 [![GitHub last commit](https://img.shields.io/github/last-commit/symemi115/Hotel_performance_monitor)](https://github.com/symemi115/Hotel_performance_monitor/commits/main)
 
+##  **Live Dashboard**
+ **[Click here to view the interactive Power BI dashboard](https://app.powerbi.com/your-actual-link-here)** 
+
+
 ## Project Overview
 
 A comprehensive data analysis and interactive dashboard project examining **119,390 hotel booking records** from two Portuguese hotels (Resort and City) over a 26-month period (July 2015 - August 2017). This project validates three key business hypotheses and provides actionable recommendations to improve revenue and operational efficiency.
