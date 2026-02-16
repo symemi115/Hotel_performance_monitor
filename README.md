@@ -13,7 +13,7 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/symemi115/Hotel_performance_monitor)](https://github.com/symemi115/Hotel_performance_monitor/commits/main)
 
 ##  **Live Dashboard**
- **[Click here to view the interactive Power BI dashboard](https://app.powerbi.com/groups/me/reports/e2e2f014-086f-4f69-b74e-1bf6d9239913/aca58f99777ad49a187e?experience=power-bi)** 
+ **[Click here to view the interactive Power BI dashboard](https://app.powerbi.com/groups/me/reports/e2e2f014-086f-4f69-b74e-1bf6d9239913/7d7950993060972fd601?experience=power-bi)** 
 
 
 ## Project Overview
